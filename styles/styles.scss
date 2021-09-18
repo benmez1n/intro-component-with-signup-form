@@ -84,6 +84,20 @@ main{
                             opacity: 0.7;
                         }
                     }
+                    .is-error,.error{color:$red;}
+                    .is-error{
+                        border: 1px solid $red !important;
+                        &::placeholder{
+                            color: $red;
+                        }
+                    }
+                    span{display: none;font-weight: 600;}
+                    .error{
+                        display: block;
+                        text-transform: capitalize;
+                        text-align: right;
+                        margin-top: -12px;
+                    }
                 }
                 p,span{font-size: 0.75rem;}
                 p{
@@ -98,20 +112,7 @@ main{
                 }
             }
         }
-    }
-    .is-error,.error{color:$red;}
-    .is-error{
-        border: 1px solid $red !important;
-        &::placeholder{
-            color: $red;
-        }
-    }
-    span{display: none;font-weight: 600;}
-    .error{
-        display: block;
-        text-transform: capitalize;
-        text-align: right;
-        margin-top: -12px;
+
     }
 }
 
