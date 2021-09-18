@@ -32,7 +32,6 @@ main{
             }
         }
         &:last-child{
-            width:90%;
             div:first-child
             {
                 width: 100%;
@@ -47,7 +46,7 @@ main{
                 }
             }
             .form{
-                padding:40px;
+                padding:5%;
                 background-color: #FFF;
                 border-radius: $radius;
                 form{
@@ -90,6 +89,27 @@ main{
                         cursor: pointer;
                     }
                 }
+            }
+        }
+    }
+}
+/*----------Media Queries-----------*/
+@media screen and (max-width:769px) {
+    body{
+        font-size: 14px;
+    }
+    main{
+        grid-template-columns: repeat(1,1fr);
+        width:90%;
+        text-align: center;
+        margin-bottom: 10%;
+        section:first-child{
+            margin:0;
+        }
+        section:last-child{
+            margin-top:10%;
+            div:first-child{
+                padding:10px 2rem;
             }
         }
     }
