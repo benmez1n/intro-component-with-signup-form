@@ -19,16 +19,22 @@
     <section>
       <div><span>Try it free 7 days</span> then $20/mo. thereafter</div>
       <div class="form">
-        <form action="POST">
-          <input type="text"  placeholder="First Name">
-          <input type="text" placeholder="Last Name">
-          <input type="email" placeholder="Email Address">
-          <input type="password" placeholder="Password">
-          <input type="button" value="Claim your free trial">
+        <form  action="POST">
+          <input id="first-name" type="text"  placeholder="First Name" />
+          <span >first name cannot be empty</span>
+          <input  id="last-name" type="text" placeholder="Last Name" />
+          <span>last name cannot be empty</span>
+          <input  id="email" type="email" placeholder="Email Address"/>
+          <span>looks like this is not an email</span>
+          <input  id="password" type="password" placeholder="Password"/>
+          <span>password cannot be empty</span>
+          <input  id="submit" type="submit" value="Claim your free trial" />
+          <span></span>
         </form>
         <p>By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
       </div>
     </section>
   </main>
+  <script src="js/main.js"></script>
 </body>
 </html>

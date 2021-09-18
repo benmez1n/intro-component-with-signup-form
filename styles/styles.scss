@@ -5,6 +5,9 @@ $blue : hsl(248, 32%, 49%) ;
 $darkBlue : hsl(249, 10%, 26%) ;
 $gryshBlue : hsl(246, 25%, 77%);
 $radius:8px;
+@mixin shadow($color) {
+    box-shadow: 0 5px 5px rgba($color,0.6);
+}
 *{
     box-sizing: border-box;
     margin:0;
@@ -41,6 +44,7 @@ main{
                 padding:15px 0;  
                 margin-bottom:2rem;  
                 border-radius: $radius;
+                @include shadow($darkBlue);
                 span{
                     font-weight: 700;
                 }
@@ -49,6 +53,7 @@ main{
                 padding:5%;
                 background-color: #FFF;
                 border-radius: $radius;
+                @include shadow(#333);
                 form{
                     display: grid;
                     row-gap: 1rem;
@@ -67,13 +72,14 @@ main{
                             font-size: 14px;
                         }
                     }
-                    input[type="button"]{
+                    input[type="submit"]{
                         border: none;
                         text-transform: uppercase;
                         background-color: $green;
                         border-radius: $radius;
                         color: #FFF;
                         cursor: pointer;
+                        @include shadow($green);
                         &:hover{
                             opacity: 0.7;
                         }
@@ -83,6 +89,7 @@ main{
                 p{
                     margin-top:10px;
                     color:$gryshBlue;
+                    text-align: center;
                     span{
                         color: $red;
                         font-weight: 700;
@@ -92,10 +99,26 @@ main{
             }
         }
     }
+    .is-error,.error{color:$red;}
+    .is-error{
+        border: 1px solid $red !important;
+        &::placeholder{
+            color: $red;
+        }
+    }
+    span{display: none;font-weight: 600;}
+    .error{
+        display: block;
+        text-transform: capitalize;
+        text-align: right;
+        margin-top: -12px;
+    }
 }
+
 /*----------Media Queries-----------*/
 @media screen and (max-width:769px) {
     body{
+        background-image: url(../images/bg-intro-mobile.png);
         font-size: 14px;
     }
     main{

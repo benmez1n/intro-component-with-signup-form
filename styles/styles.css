@@ -35,6 +35,7 @@ main section:last-child div:first-child {
   padding: 15px 0;
   margin-bottom: 2rem;
   border-radius: 8px;
+  box-shadow: 0 5px 5px rgba(62, 60, 73, 0.6);
 }
 main section:last-child div:first-child span {
   font-weight: 700;
@@ -43,6 +44,7 @@ main section:last-child .form {
   padding: 5%;
   background-color: #FFF;
   border-radius: 8px;
+  box-shadow: 0 5px 5px rgba(51, 51, 51, 0.6);
 }
 main section:last-child .form form {
   display: grid;
@@ -63,15 +65,16 @@ main section:last-child .form form input::placeholder {
   font-weight: 600;
   font-size: 14px;
 }
-main section:last-child .form form input[type=button] {
+main section:last-child .form form input[type=submit] {
   border: none;
   text-transform: uppercase;
   background-color: #38cc8c;
   border-radius: 8px;
   color: #FFF;
   cursor: pointer;
+  box-shadow: 0 5px 5px rgba(56, 204, 140, 0.6);
 }
-main section:last-child .form form input[type=button]:hover {
+main section:last-child .form form input[type=submit]:hover {
   opacity: 0.7;
 }
 main section:last-child .form p, main section:last-child .form span {
@@ -80,16 +83,37 @@ main section:last-child .form p, main section:last-child .form span {
 main section:last-child .form p {
   margin-top: 10px;
   color: #b9b6d3;
+  text-align: center;
 }
 main section:last-child .form p span {
   color: #ff7a7a;
   font-weight: 700;
   cursor: pointer;
 }
+main .is-error, main .error {
+  color: #ff7a7a;
+}
+main .is-error {
+  border: 1px solid #ff7a7a !important;
+}
+main .is-error::placeholder {
+  color: #ff7a7a;
+}
+main span {
+  display: none;
+  font-weight: 600;
+}
+main .error {
+  display: block;
+  text-transform: capitalize;
+  text-align: right;
+  margin-top: -12px;
+}
 
 /*----------Media Queries-----------*/
 @media screen and (max-width: 769px) {
   body {
+    background-image: url(../images/bg-intro-mobile.png);
     font-size: 14px;
   }
 
