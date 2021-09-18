@@ -1,1 +1,96 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+$red : hsl(0, 100%, 74%) ;
+$green : hsl(154, 59%, 51%);
+$blue : hsl(248, 32%, 49%) ;
+$darkBlue : hsl(249, 10%, 26%) ;
+$gryshBlue : hsl(246, 25%, 77%);
+$radius:8px;
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-size: 16px;
+}
+body{
+    background: $red url(../images/bg-intro-desktop.png);
+    font-family: Poppins;
+}
+main{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 2%;
+    width:80%;
+    margin:5% auto 0;
+    section{
+        &:first-child{
+            margin-top:25%;
+            color:#FFF;
+            h1{
+                font-size: 3rem;
+                line-height: 3.5rem;
+                margin-bottom: 1.5rem;
+            }
+        }
+        &:last-child{
+            width:90%;
+            div:first-child
+            {
+                width: 100%;
+                color:#FFF;
+                background-color: $blue;
+                text-align: center;
+                padding:15px 0;  
+                margin-bottom:2rem;  
+                border-radius: $radius;
+                span{
+                    font-weight: 700;
+                }
+            }
+            .form{
+                padding:40px;
+                background-color: #FFF;
+                border-radius: $radius;
+                form{
+                    display: grid;
+                    row-gap: 1rem;
+                    input{
+                        height: 50px;
+                        border-radius: $radius;
+                        padding:0 2rem;
+                        border:1px solid rgba(0,0,0,0.2);
+                        font-weight: 600;
+                        &:focus{
+                            border: 1px solid rgba(0,0,0, 0.6);
+                            outline: none;
+                        }
+                        &::placeholder{
+                            font-weight: 600;
+                            font-size: 14px;
+                        }
+                    }
+                    input[type="button"]{
+                        border: none;
+                        text-transform: uppercase;
+                        background-color: $green;
+                        border-radius: $radius;
+                        color: #FFF;
+                        cursor: pointer;
+                        &:hover{
+                            opacity: 0.7;
+                        }
+                    }
+                }
+                p,span{font-size: 0.75rem;}
+                p{
+                    margin-top:10px;
+                    color:$gryshBlue;
+                    span{
+                        color: $red;
+                        font-weight: 700;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
